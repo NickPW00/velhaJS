@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="velha copy.css">
+    <title></title>
+</head>
+<body>
+    <div class="centralizar">
+        <p>A vez da jogada é <span id="lero">X</span></p>
+    </div>
+    <div class="centralizar">
+        <div>
+            <div class="tile_row">
+                <div onclick="jogadas(1)" class="tile" id="tile1"></div>
+                <div onclick="jogadas(2)" class="tile" id="tile2"></div>
+                <div onclick="jogadas(3)" class="tile" id="tile3"></div>
+            </div>
+            <div class="tile_row">
+                <div onclick="jogadas(4)" class="tile" id="tile4"></div>
+                <div onclick="jogadas(5)" class="tile" id="tile5"></div>
+                <div onclick="jogadas(6)" class="tile" id="tile6"></div>
+            </div>
+            <div class="tile_row">
+                <div onclick="jogadas(7)" class="tile" id="tile7"></div>
+                <div onclick="jogadas(8)" class="tile" id="tile8"></div>
+                <div onclick="jogadas(9)" class="tile" id="tile9"></div>
+            </div>
+        </div>
+    </div>
+    <div class="centralizar">
+        <p id="vencedor"></p>
+    </div>
+    <script src="velha copy.js"></script>
+</body>
+</html>

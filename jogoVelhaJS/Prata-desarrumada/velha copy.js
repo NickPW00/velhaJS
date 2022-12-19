@@ -1,9 +1,7 @@
 let play = 0
 let partida = 0
-let pontos1 = 0
-let pontos2 = 0
-let milli = 0
-
+pontos1 = 0
+pontos2 = 0
 
 function jogadas(num){
     let base = document.getElementById(`tile${num}`)
@@ -22,7 +20,6 @@ function jogadas(num){
     pontuacao()
     console.log(play)
     console.log(partida)
-    setInterval(relogio, 10)
 }
 
 function vez(base){
@@ -146,28 +143,23 @@ function baseVitoria(letra, n1, n2, n3, n4, n5, n6, n7, n8, n9){
     }
 }
 
-// Resumir função
 function pontuacao(){
     if(document.getElementById("vencedor").innerHTML == "X venceu!" && document.getElementById("jogador").innerHTML == 2 ){
         pontos1 += 5
         document.getElementById("pontos1").innerHTML = pontos1
-        document.getElementById("vencedor").innerHTML += " (Jogador 1)"
-        travaZapGigante()
+        document.getElementById("vencedor").innerHTML += " (Jogador 1)" 
     } else if(document.getElementById("vencedor").innerHTML == "X venceu!" && document.getElementById("jogador").innerHTML == 1 ){
         pontos2 += 5
         document.getElementById("pontos2").innerHTML = pontos2
-        document.getElementById("vencedor").innerHTML += " (Jogador 2)"
-        travaZapGigante() 
+        document.getElementById("vencedor").innerHTML += " (Jogador 2)" 
     } else if(document.getElementById("vencedor").innerHTML == "O venceu!" && document.getElementById("jogador").innerHTML == 2 ){
         pontos1 += 5
         document.getElementById("pontos1").innerHTML = pontos1
-        document.getElementById("vencedor").innerHTML += " (Jogador 1)"
-        travaZapGigante() 
+        document.getElementById("vencedor").innerHTML += " (Jogador 1)" 
     } else if(document.getElementById("vencedor").innerHTML == "O venceu!" && document.getElementById("jogador").innerHTML == 1 ){
         pontos2 += 5
         document.getElementById("pontos2").innerHTML = pontos2
-        document.getElementById("vencedor").innerHTML += " (Jogador 2)"
-        travaZapGigante() 
+        document.getElementById("vencedor").innerHTML += " (Jogador 2)" 
     }
 }
 
@@ -182,27 +174,6 @@ function pontosAhMais(){
     */
 }
 
-function travaZap(num){
-    let bloco = document.getElementById(`tile${num}`)
-    bloco.style.pointerEvents = "none"
-}
-
-function travaZapGigante(){
-    travaZap(1)
-    travaZap(2)
-    travaZap(3)
-    travaZap(4)
-    travaZap(5)
-    travaZap(6)
-    travaZap(7)
-    travaZap(8)
-    travaZap(9)
-}
-
-function relogio(){
-    milli += 1
-    document.getElementById("millisecond").innerHTML = milli
-}
 
 /*
 Partes de função que foram resumidas mas podem ser usadas:
